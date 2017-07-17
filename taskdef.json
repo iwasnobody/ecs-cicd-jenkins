@@ -1,14 +1,8 @@
 {
   "networkMode": "bridge",
-  "taskRoleArn": null,
   "containerDefinitions": [
     {
-      "volumesFrom": [],
       "memory": 128,
-      "extraHosts": null,
-      "dnsServers": [],
-      "disableNetworking": null,
-      "dnsSearchDomains": [],
       "portMappings": [
         {
           "hostPort": 0,
@@ -16,7 +10,6 @@
           "protocol": "tcp"
         }
       ],
-      "hostname": null,
       "essential": true,
       "entryPoint": [
         "/usr/sbin/apache2",
@@ -26,37 +19,17 @@
       "mountPoints": [
         {
           "containerPath": "/var/www/my-vol",
-          "sourceVolume": "my-vol",
-          "readOnly": null
+          "sourceVolume": "my-vol"
         }
       ],
       "name": "simple-app",
-      "ulimits": null,
-      "dockerSecurityOptions": [],
-      "environment": [
-        {
-          "name": "Tag",
-          "value": "60e49285"
-        }
-      ],
-      "links": [],
-      "workingDirectory": null,
-      "readonlyRootFilesystem": null,
       "image": "%REPOSITORY_URI%:v_%BUILD_NUMBER%",
-      "command": [],
-      "user": null,
-      "dockerLabels": {},
-      "logConfiguration": null,
       "cpu": 0,
-      "privileged": null,
-      "memoryReservation": null
     }
   ],
-  "placementConstraints": [],
   "volumes": [
     {
       "host": {
-        "sourcePath": null
       },
       "name": "my-vol"
     }
