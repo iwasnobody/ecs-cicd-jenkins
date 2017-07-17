@@ -24,7 +24,7 @@
       ],
       "name": "simple-app",
       "image": "%REPOSITORY_URI%:v_%BUILD_NUMBER%",
-      "cpu": 0,
+      "cpu": 0
     }
   ],
   "volumes": [
